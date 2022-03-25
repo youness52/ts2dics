@@ -7,7 +7,7 @@
         {
             print $row[0] . " ";
             print $row[2] . "-->";
-            print $row[3] . "<br>";
+            print $row[3] . "<br> ";
         }
 		$cn = null;
        ?>
