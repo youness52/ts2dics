@@ -6,7 +6,7 @@ while ($row=$sql->fetch()) {
     echo $row[0] . "    " . $row[1]. "<br>";
 }
 $conn=null;
-
+ 
 ?>
 
 
