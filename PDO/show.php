@@ -1,5 +1,5 @@
 <?php
-
+//methode 1
 require('config.php');
 $sql=$conn->query("SELECT * FROM `etudiants`");
 while ($row=$sql->fetch()) {
@@ -11,6 +11,7 @@ $conn=null;
 
 
 <?php
+//methode 2
 require('config.php');
 $sql=$conn->prepare("SELECT * FROM `etudiants`");
 $sql->execute();
