@@ -3,7 +3,7 @@
 require('config.php');
 $sql=$conn->query("SELECT * FROM `etudiants`");
 while ($row=$sql->fetch()) {
-    echo $row[0] . "    " . $row[1]. "<br>";
+    echo $row[0] . "  " . $row[1]. "<br>";
 }
 $conn=null;
  
