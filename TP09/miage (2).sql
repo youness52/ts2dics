@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 31, 2022 at 08:54 PM
+-- Generation Time: May 31, 2022 at 09:39 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -52,6 +52,26 @@ INSERT INTO `etudiants` (`id`, `fname`, `lname`, `email`, `tele`) VALUES
 (14, '0', '0', '0', '545'),
 (15, '0', '0', '0', '545');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `email` varchar(255) COLLATE utf8_bin NOT NULL,
+  `psw` varchar(255) COLLATE utf8_bin NOT NULL,
+  `date_regis` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `email`, `psw`, `date_regis`) VALUES
+(1, 'ahmed@gmail.com', '1234', '2022-05-31');
+
 --
 -- Indexes for dumped tables
 --
@@ -63,6 +83,12 @@ ALTER TABLE `etudiants`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -71,6 +97,12 @@ ALTER TABLE `etudiants`
 --
 ALTER TABLE `etudiants`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
