@@ -3,6 +3,8 @@
         <th>ID</th>
         <th>Nom</th>
         <th>Prenom</th>
+        <th>Email</th>
+        <th>Telephone</th>
     </tr>
 <?php
 require('config.php');
@@ -15,6 +17,8 @@ while ($row=mysqli_fetch_array($result)) {
         <td><?php echo $row[0] ?></td>
         <td><?php echo $row[1] ?></td>
         <td><?php echo $row[2] ?></td>
+        <td><?php echo $row[3] ?></td>
+        <td><?php echo $row[4] ?></td>
     </tr>
 
    <?php

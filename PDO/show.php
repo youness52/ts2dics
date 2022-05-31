@@ -1,8 +1,8 @@
 <?php
 //methode 1
 require('config.php');
-$sql=$conn->query("SELECT * FROM `etudiants`");
-while ($row=$sql->fetch()) {
+$result=$conn->query("SELECT * FROM `etudiants`");
+while ($row=$result->fetch()) {
     echo $row[0] . "  " . $row[1]. "<br>";
 }
 $conn=null;
@@ -13,9 +13,9 @@ $conn=null;
 <?php
 //methode 2
 require('config.php');
-$sql=$conn->prepare("SELECT * FROM `etudiants`");
-$sql->execute();
-while ($row=$sql->fetch()) {
+$result=$conn->prepare("SELECT * FROM `etudiants`");
+$result->execute();
+while ($row=$result->fetch()) {
     echo $row[0] . "    " . $row[1]. "<br>";
 }
 $conn=null;
