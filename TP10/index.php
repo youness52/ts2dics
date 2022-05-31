@@ -8,5 +8,26 @@
 </head>
 <body>
     <h3>index page</h3>
+    <h3><?php 
+    session_start();
+    echo $_SESSION['user'];?></h3>
+
+    <form action="" method="post">
+        <input type="submit" name="logout" value="Logout">
+    </form>
 </body>
 </html>
+<?php
+//session_start();
+if(!isset($_SESSION['user'])){
+header("location:login.php");
+}
+?>
+<?php
+//session_start();
+if(isset($_POST['logout'])){
+session_unset();
+session_destroy();
+header('location:login.php');
+}
+?>

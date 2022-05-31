@@ -104,6 +104,8 @@ if (isset($_POST['login'])){
     $result=$conn->prepare("SELECT * FROM user where email='$email' and psw='$passw'");
     $result->execute();
     if ($row=$result->fetch()) {
+        session_start();
+        $_SESSION['user']=$email;
         header("location:index.php");
     }else {
         echo "Email or password incorrect";
